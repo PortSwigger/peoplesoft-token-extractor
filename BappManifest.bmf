@@ -6,7 +6,7 @@ ScreenVersion: 1.0
 SerialVersion: 0
 MinPlatformVersion: 0
 ProOnly: False
-Author: Sayed Hamzah
+Author: Sayed Hamzah, Centurion Information Security
 ShortDescription: TODO
 EntryPoint: pstoken.py
 BuildCommand: 
