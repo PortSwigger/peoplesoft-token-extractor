@@ -1,9 +1,22 @@
-<p>This extension help test PeopleSoft SSO tokens. The features are:</p>
+<p>
+    Analyzes Oracle PeopleSoft single sign-on tokens (PS_TOKEN) captured in requests, decoding the token data and
+    supporting offline password recovery and token forgery for authorized testing of PeopleSoft SSO trust relationships.
+</p>
 
+<h2>Features</h2>
 <ul>
-    <li>Extracts and displays token information based on the decompressed data</li>
-    <li>Generates the Hashcat format - to perform brute-force/dictionary attacks in order to obtain the local node password</li>
-    <li>Generates a new PSTOKEN value that can be used in order to authenticate as another user (requires knowledge of the local node password)</li>
+    <li>Decodes a captured PS_TOKEN and displays its underlying fields, making the single sign-on exchange between
+        PeopleSoft nodes inspectable.</li>
+    <li>Exports the token hash in Hashcat format for offline brute-force or dictionary attacks against the local node
+        password.</li>
+    <li>Builds a new, validly signed PS_TOKEN for a chosen user once the local node password is known, letting testers
+        demonstrate impersonation across trusted nodes.</li>
 </ul>
 
-<p>This is a re-implementation of the TokenChpoken (https://erpscan.com/press-center/blog/peoplesoft-security-part-4-peoplesoft-pentest-using-tokenchpoken-tool/ - link is down) Tool developed by ERPScan.</p>
+<h2>Usage</h2>
+<ol>
+    <li>Capture a request containing a PS_TOKEN cookie or parameter.</li>
+    <li>Send it to the extension's token tab to decode and inspect the token fields.</li>
+    <li>Export the Hashcat hash and attempt to recover the local node password.</li>
+    <li>With the recovered password, generate a new PS_TOKEN for a target user to test SSO trust between nodes.</li>
+</ol>
