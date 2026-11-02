@@ -3,10 +3,11 @@ ExtensionType: 2
 Name: PeopleSoft Token Extractor
 RepoName: peoplesoft-token-extractor
 ScreenVersion: 1.0
-SerialVersion: 0
+SerialVersion: 1
 MinPlatformVersion: 0
 ProOnly: False
 Author: Sayed Hamzah, Centurion Information Security
-ShortDescription: TODO
+ShortDescription: Decodes and forges PeopleSoft PS_TOKEN SSO tokens.
 EntryPoint: pstoken.py
 BuildCommand: 
+SupportedProducts: Pro, Community
